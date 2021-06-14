@@ -31,3 +31,65 @@ int main()
 }
 
 
+
+//2. Using In-place algorithms
+
+1.An in-place algorithm transforms the input without using any extra memory.
+  As the algorithm executes, the input is usually overwritten by the output, 
+  and no additional space is needed for this operation.
+
+2.An in-place algorithm may require a small amount of extra memory for its 
+  operation. However, the amount of memory required must not be dependent on 
+  the input size and should be constant.
+
+3.Several sorting algorithms rearrange the input into sorted order in-place, 
+  such as insertion sort, selection sort, quick sort, bubble sort, heap sort,
+  etc. All these algorithms require a constant amount of extra space for 
+  rearranging the elements in the input array.
+  
+4. Usually, an algorithm is categorized as an in-place or an out-of-place 
+   algorithm based on the explicit storage allocated by the algorithm. 
+   However, calling a recursive algorithm as in-place is highly debatable
+   since extra space is being used by the call stack. Although this space 
+   required by the call stack technically takes the recursive algorithms 
+   out of the in-place algorithms category, the algorithms requiring only 
+   O(log(n)) additional space is considered to be in-place.
+   
+ 5.In-place algorithms are usually used in an embedded system that runs
+   in limited memory. They reduce the space requirements to a great extent,
+   but the algorithm time complexity increases in some cases.
+  
+  
+  
+  #include<iostream>
+#include<algorithm>
+using namespace std;
+
+void print(int arr[] , int n)
+{
+
+for(int i = 0 ; i< n; i++)
+ {
+    cout<< arr[i]<<" ";
+ }
+}
+
+// utility functions to reverse elements of an array
+void reverse(int arr[] , int n)
+{
+    for(int low = 0, high = n - 1 ; low < high ; low++ ,high--) {
+        swap(arr[low], arr[high]);
+
+    }
+}
+
+int main()
+{
+    int arr[] = {1,2,3,4,5};
+    int n = sizeof(arr)/sizeof(arr[0]);
+
+    reverse(arr,n);
+    print(arr,n);
+    return 0;
+}
+ 
