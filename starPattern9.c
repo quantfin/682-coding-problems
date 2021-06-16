@@ -1,9 +1,9 @@
 C program to print following pattern:
 
 ABCDCBA
-ABC DCB
-AB   CB
-A     B
+ABC CBA
+AB   BA
+A     A
 
 
 
@@ -33,6 +33,8 @@ int main()
         else
         {
             printf(" ");
+            if(j==4)
+            k--;
 
         }             
 
