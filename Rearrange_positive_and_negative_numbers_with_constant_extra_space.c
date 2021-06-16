@@ -51,3 +51,6 @@ int main()
 
     return 0;
 }
+
+
+//output: -12 -11 -15 4 6 12 11 
