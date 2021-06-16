@@ -1,3 +1,14 @@
+//program to print following pattern
+
+*********
+**** ****
+***   ***
+**     **
+*       *
+
+
+code:
+
 #include<stdlib.h>
 #include<stdio.h>
 
