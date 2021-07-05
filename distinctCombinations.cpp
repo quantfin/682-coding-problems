@@ -7,6 +7,7 @@ void findCombinations(int arr[], string out, int i, int n, int k)
 {
     // invalid input
     if (k > n) {
+        cout<<"No Combination Found!";
         return;
     }
 
