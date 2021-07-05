@@ -1,5 +1,5 @@
 #include <iostream>
-#include<algorithm>
+#include<algorithm> // for sort function
 using namespace std;
 
 // Function to print all distinct combinations of length `k`
@@ -27,9 +27,9 @@ void findCombinations(int arr[], string out, int i, int n, int k)
 
         // uncomment the following code to handle duplicates
 
-         while (j < n - 1 && arr[j] == arr[j + 1]) {
+        /* while (j < n - 1 && arr[j] == arr[j + 1]) {
             j++;
-        }
+        } */
     }
 }
 
